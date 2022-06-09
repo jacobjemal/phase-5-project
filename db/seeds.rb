@@ -1,66 +1,51 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
 
-# Unit.create(
-#     name: '',
-#     hp: ,
-#     move: ,
-#     attack: ,
-#     defense: ,
-#     weapon: '',
-#     range: ,
-#     stationery_sprite: '',
-#     attack_sprite: '',
-#     description: ''
-#  
-#     team_id: ,
-# )
+puts "Deleting data..."
 
+User.destroy_all
+
+puts "Deleting USERS..."
+Team.destroy_all
+
+puts "Deleting TEAMS..."
+
+Unit.destroy_all
+puts "Deleting UNITS..."
 
 u1 = User.create(
-    username: 'player one',
-    password_digest: 'password'
+    username: 'dorha the explora ( player one )'
 )
 
 u2 = User.create(
-    username: 'player two',
-    password_digest: 'password'
+    username: 'joe ( player two )'
 )
 
 u3 = User.create(
-    username: 'player three',
-    password_digest: 'password'
+    username: 'mr. crabs ( player three )'
 )
 
 u4 = User.create(
-    username: 'player four',
-    password_digest: 'password'
+    username: 'sponge bob ( player four )'
 )
 
-#############################
+puts '🌱 users Done!'
 
 t1 = Team.create(
-    user_id: u1.id
-)
-
-t2 = Team.create(
-    user_id: u2.id
-)
-
-t3 = Team.create(
     user_id: u3.id
 )
 
-t4 = Team.create(
+t2 = Team.create(
     user_id: u4.id
 )
 
-##############################
+t3 = Team.create(
+    user_id: u1.id
+)
+
+t4 = Team.create(
+    user_id: u2.id
+)
+
+puts '🌱 teams Done!'
 
 Unit.create(
     name: 'Eirika',
@@ -73,22 +58,22 @@ Unit.create(
     stationery_sprite: 'https://fireemblemwiki.org/wiki/Category:The_Sacred_Stones_battle_animations',
     attack_sprite: 'https://cdn.fireemblemwiki.org/f/fa/Ba_fe08_eirika_great_lord_sword.gif',
     description: "The princess of the Kingdom of Renais. She's elegant and kind.",
-    team_id: t1.id
+    team_id: t2.id
 )
 
 Unit.create(
-        name: 'Ephraim',
-        hp: 18,
-        move: 5,
-        attack: 6,
-        defense: 6,
-        weapon: 'Lance',
-        range: 1-2,
-        stationery_sprite: 'https://cdn.fireemblemwiki.org/4/46/Ma_gba_great_lord_ephraim_playable.gif',
-        attack_sprite: 'https://cdn.fireemblemwiki.org/6/6e/Ba_fe08_ephraim_great_lord_lance.gif',
-        description: 'The prince of Renais. He is a man of great honour and bravery.',
-        team_id: t2.id
-    )
+    name: 'Ephraim',
+    hp: 18,
+    move: 5,
+    attack: 6,
+    defense: 6,
+    weapon: 'Lance',
+    range: 1,
+    stationery_sprite: 'https://cdn.fireemblemwiki.org/4/46/Ma_gba_great_lord_ephraim_playable.gif',
+    attack_sprite: 'https://cdn.fireemblemwiki.org/6/6e/Ba_fe08_ephraim_great_lord_lance.gif',
+    description: 'The prince of Renais. He is a man of great honour and bravery.',
+    team_id: t2.id
+)
 
     Unit.create(
     name: 'Seth',
@@ -111,7 +96,7 @@ Unit.create(
     attack: 6,
     defense: 8,
     weapon: 'Lance',
-    range: 1-2,
+    range: 1,
     stationery_sprite: 'https://cdn.fireemblemwiki.org/0/05/Ma_gba_paladin_playable.gif',
     attack_sprite: 'https://cdn.fireemblemwiki.org/1/1f/Ba_fe08_seth_paladin_lance.gif',
     description: "A young commander of Renais. He's calm, composed, and skilled.",
@@ -140,7 +125,7 @@ Unit.create(
     attack: 8,
     defense: 8,
     weapon: 'Lance',
-    range: 1-2,
+    range: 1,
     stationery_sprite: 'https://cdn.fireemblemwiki.org/2/2a/Ma_gba_general_playable.gif',
     attack_sprite: 'https://cdn.fireemblemwiki.org/d/d6/Ba_fe08_gilliam_general_lance.gif',
     description: "An armoured knight from Frelia. He's quiet yet dependable.",
@@ -210,7 +195,7 @@ Unit.create(
     attack: 7,
     defense: 5,
     weapon: 'Bow',
-    range: 1-2,
+    range: 1,
     stationery_sprite: 'https://cdn.fireemblemwiki.org/4/4f/Ma_gba_sniper_playable.gif',
     attack_sprite: 'https://cdn.fireemblemwiki.org/e/ed/Ba_fe08_innes_sniper_bow.gif',
     description: "The prince of Frelia. He's brash and arrogant, but good at heart.",
@@ -239,7 +224,7 @@ Unit.create(
     attack: 7,
     defense: 5,
     weapon: 'Bow',
-    range: 1-2,
+    range: 1,
     stationery_sprite: 'https://cdn.fireemblemwiki.org/5/5e/Ma_gba_ranger_playable.gif',
     attack_sprite: 'https://cdn.fireemblemwiki.org/1/14/Ba_fe08_hayden_ranger_bow.gif',
     description: "The king of Frelia. He's a good friend to both Eirika and Ephraim.",
@@ -295,7 +280,7 @@ Unit.create(
     attack: 8,
     defense: 5,
     weapon: 'Bow',
-    range: 1-2,
+    range: 1,
     stationery_sprite: 'https://cdn.fireemblemwiki.org/a/a2/Ma_gba_warrior_playable.gif',
     attack_sprite: 'https://cdn.fireemblemwiki.org/4/40/Ba_fe08_garcia_warrior_bow.gif',
     description: 'A villager from Renais. He was once a feared military leader.',
@@ -316,5 +301,6 @@ Unit.create(
     team_id: t1.id
 )
 
+puts '🌱 units Done!'
 
 puts '🌱 Seeding Done!'

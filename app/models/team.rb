@@ -1,7 +1,9 @@
 class Team < ApplicationRecord
     belongs_to :user
-    has_many :units
+    has_many :units, dependent: :destroy_async
 
-    delegate :username, to: :user, allow_nil: true
 
+    def battle # who fights who
+
+    end
 end
