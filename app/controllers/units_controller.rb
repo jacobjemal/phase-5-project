@@ -36,6 +36,6 @@ class UnitsController < ApplicationController
     private
 
     def unit_params
-        params.permit(:name, :hp, :move, :attack, :defense, :weapon, :range, :stationery_sprite, :attack_sprite, :description, :team_id) 
+        params.permit(:name, :hp, :move, :attack, :defense, :weapon, :range, :stationery_sprite_blue, :stationery_sprite_red, :attack_sprite, :description, :team_id) 
     end
 end

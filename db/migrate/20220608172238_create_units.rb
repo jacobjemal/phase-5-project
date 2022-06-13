@@ -9,7 +9,8 @@ class CreateUnits < ActiveRecord::Migration[7.0]
       t.string :weapon
       t.integer :range
       t.integer :team_id
-      t.string :stationery_sprite
+      t.string :stationery_sprite_blue
+      t.string :stationery_sprite_red
       t.string :attack_sprite
       t.text :description
 

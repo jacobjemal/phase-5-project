@@ -10,7 +10,7 @@ class Unit < ApplicationRecord
 
     def attack_turn(defender) 
         attack = self.attack - defender.defense
-        if defender.team == self.team
+            if defender.team == self.team
                 puts "sorry cant attack allies"
                 return 0 # Seth cant attack Ephraim
             end
