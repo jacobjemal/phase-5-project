@@ -1,10 +1,13 @@
-
+import GamePage from "./GamePage";
+import UnitPage from "./UnitPage";
 function Home() {
 
     return(
-    // <Login />
-    // <SignUp /> 
-        <GamePage />
-    )
+        <div>
+    {/* <Login /> */}
+    {/* <SignUp />  */}
+        <UnitPage />
+        </div>
+    ) 
 }
 export default Home;
