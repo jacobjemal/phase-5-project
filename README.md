@@ -1,24 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Team.first.units.first.weapon
+ Unit.first.attack_turn(Unit.last)
 
-Things you may want to cover:
+ p1 = Team.first.units
+ p1.first.move_unit(2)
+ p1.first.attack_turn(p2.last)
 
-* Ruby version
 
-* System dependencies
+ p2 = Team.second.units
+ p3 = Team.third.units
+ p4 = Team.fourth.units
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

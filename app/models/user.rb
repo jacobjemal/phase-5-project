@@ -7,10 +7,5 @@ class User < ApplicationRecord
 
     validates :username, presence: true, uniqueness: true
 
-    # moves the units and takes turns 
-
-    def change_player
-    end
-
 
 end

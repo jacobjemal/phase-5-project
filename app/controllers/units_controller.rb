@@ -2,7 +2,7 @@ class UnitsController < ApplicationController
 
     def index
         units = Unit.all
-        render json: units, status: 200
+        render json: units, status: 200 
     end
 
     def show
@@ -27,6 +27,11 @@ class UnitsController < ApplicationController
         render json: {}, status: 200
         # head :no_content
     end
+
+    # def dead_units
+    #     units = Unit.find(params[:hp])
+    #     render json: units unless units.hp <= 0
+    # end
 
     private
 
