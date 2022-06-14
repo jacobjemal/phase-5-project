@@ -1,37 +1,56 @@
 import { useState } from "react"
 
 const UnitCards = ({element, setSelectedUnits}) => {
-  
-const {attack, attack_sprite, defense, description, hp, id, move, name, range, stationery_sprite_blue, stationery_sprite_red, team, team_id, weapon} = element
+    const [show, setShow] = useState(null)
+    const [isVis, setIsVis] = useState(false)
+    const {attack, attack_sprite, defense, hp, weapon, move, name, range, stationery_sprite_blue, stationery_sprite_red  /*, team, team_id, description, id */ } = element
+    // setIsVis(prevState => !prevState)
+
+const showRed = () => {
+    setShow(false) 
+    setIsVis(true)
+}
+const showBlue = () => {
+    setShow(true) 
+    setIsVis(true)
+}
 
 const handleClick = () => {
-    alert('you selected')
-  }
+    alert(`you selected ${name}`)
+}
 
 return(
-    <div class="unit-card">
-
-        <div class="flip-box">
-            <div class="flip-box-inner">
-            <div class="flip-box-front">
-                <img
-                src={attack_sprite}/>
+    <div className="flip-box">
+        {/* onClick={handleClick }> */}
+            <div className="flip-box-inner">
+            <div className="flip-box-front">
                 <h2>{name}</h2>
+                <img
+                src={attack_sprite} alt={name}/>
+                    <div style={{display: isVis ? "block" : "none"}}>
+                    {show ? <img src={stationery_sprite_blue} className="small-unit"/> : <img  src={stationery_sprite_red} className="small-unit"/>}
+                    </div>
                 </div>
-                <div class="flip-box-back"
-                onClick={handleClick}>
-                    <h3>
+                <div className="flip-box-back">
+                    
                     <p>attack: {attack}</p>
                     <p>defense: {defense}</p>
                     <p>hp: {hp}</p>
                     <p>move: {move}</p>
                     <p>weapon: {weapon}</p>
                     <p>range: {range}</p>
-                    </h3>
-                </div>
+                    
+                    
+                    
+                    <button className="small-unit-btn" onClick={()=> {showBlue()}}> <img  src={stationery_sprite_blue}/> </button>
+                    <button className="small-unit-btn" onClick={()=> {showRed()}}> <img  src={stationery_sprite_red}/> </button>
+                    {/* <button className="small-unit-btn" onClick={()=> {setShow(true), setIsVis(true)}}> <img  src={stationery_sprite_blue}/> </button>
+                    <button className="small-unit-btn" onClick={()=> {setShow(false), setIsVis(true)}}> <img  src={stationery_sprite_red}/> </button> */}
+                    
+                </div> 
             </div>
         </div>
-    </div>
+        
     )
 
 }

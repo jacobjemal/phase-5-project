@@ -8,6 +8,7 @@ h1 {
 }
 
 h5 {
+  right: 30;
   font-family: 'Bebas Neue', cursive;
   text-align: center;
   font-size: 2em;
@@ -15,17 +16,13 @@ h5 {
 }
 
 .unit-grid {
+  width: 1100px;
   display: flex;
-  gap: 8px;
   flex-wrap: wrap;
   border-radius: 5px;
-  width: min-content;
   min-width: calc(840px + 25px);
-  height: min-content;
-  justify-content: center;
-  text-align: center;
-  
-}
+  margin: auto;
+} 
 
 /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-box {
@@ -33,9 +30,11 @@ h5 {
   background-position: center;
   width: 200px;
   height: 250px;
-  border: 1px solid #f1f1f1;
+  margin: 10px;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
+
+
 
 /* This container is needed to position the front and back side */
 .flip-box-inner {
@@ -74,4 +73,25 @@ h5 {
   background-position: center;
   color: black;
   transform: rotateY(180deg);
+}
+
+.flip-box-back p {
+  font-weight: bold;
+  margin: 10px;
+}
+/* .ubtn {
+  background-color: transparent;
+  border-color: transparent;
+} */
+
+.small-unit {
+  position: fixed;
+  top: 80%;
+  height: 30px;
+  width: 30px;
+}
+
+.small-unit-btn {
+  cursor: pointer;
+  width: 50%;
 }

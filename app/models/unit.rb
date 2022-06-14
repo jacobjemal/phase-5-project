@@ -20,7 +20,7 @@ class Unit < ApplicationRecord
             defender.hp = (defender.hp - attack)
         end
         puts "#{self.name} from team #{self.team_id} attacked #{defender.name} from team #{defender.team_id} with a #{self.weapon}  #*#*#*#  #{defender.name} has #{defender.hp} hp left"
-        if defender.hp <= 0
+        if defender.hp = 0
             defender.destroy #disappear?
             puts "#{self.name} from 'team #{self.team_id}' has killed #{defender.name} from 'team #{defender.team_id}' with a #{self.weapon}"
         end

@@ -15,3 +15,6 @@ Team.first.units.first.weapon
 Unit.find(3).attack_turn(Unit.find(1))
 
 p1.find(3).attack_turn(p2.find(1))
+
+https://fireemblemwiki.org/wiki/Category:The_Sacred_Stones_battle_animations
+https://fireemblemwiki.org/wiki/Category:The_Sacred_Stones_map_animations

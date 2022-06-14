@@ -29,7 +29,7 @@ u4 = User.create(
 puts '🌱 users Done!'
 
 t1 = Team.create(
-    user_id: 3
+    user_id: u3.id
 )
 
 t2 = Team.create(
@@ -46,33 +46,33 @@ t4 = Team.create(
 
 puts '🌱 teams Done!'
 
-f1 = Unit.create!(
-    name: 'Eirika',
-    hp: 16,
-    move: 5,
-    attack: 4,
-    defense: 3,
-    weapon: 'Sword',
-    range: 1,
-    stationery_sprite_blue: 'https://fireemblemwiki.org/wiki/Category:The_Sacred_Stones_battle_animations',
-    attack_sprite: 'https://cdn.fireemblemwiki.org/f/fa/Ba_fe08_eirika_great_lord_sword.gif',
-    description: "The princess of the Kingdom of Renais. She's elegant and kind.",
-    team_id: 2
-)
+# f1 = Unit.create!(
+#     name: 'Eirika',
+#     hp: 16,
+#     move: 5,
+#     attack: 4,
+#     defense: 3,
+#     weapon: 'Sword',
+#     range: 1,
+#     stationery_sprite_blue: 'https://cdn.fireemblemwiki.org/e/e7/Ma_gba_great_lord_eirika_playable.gif',
+#     attack_sprite: 'https://cdn.fireemblemwiki.org/f/fa/Ba_fe08_eirika_great_lord_sword.gif',
+#     description: "The princess of the Kingdom of Renais. She's elegant and kind.",
+#     team_id: 2
+# )
 
-f2 = Unit.create(
-    name: 'Ephraim',
-    hp: 18,
-    move: 5,
-    attack: 6,
-    defense: 6,
-    weapon: 'Lance',
-    range: 1,
-    stationery_sprite_blue: 'https://cdn.fireemblemwiki.org/4/46/Ma_gba_great_lord_ephraim_playable.gif',
-    attack_sprite: 'https://cdn.fireemblemwiki.org/6/6e/Ba_fe08_ephraim_great_lord_lance.gif',
-    description: 'The prince of Renais. He is a man of great honour and bravery.',
-    team_id: 2
-)
+# f2 = Unit.create(
+#     name: 'Ephraim',
+#     hp: 18,
+#     move: 5,
+#     attack: 6,
+#     defense: 6,
+#     weapon: 'Lance',
+#     range: 1,
+#     stationery_sprite_blue: 'https://cdn.fireemblemwiki.org/4/46/Ma_gba_great_lord_ephraim_playable.gif',
+#     attack_sprite: 'https://cdn.fireemblemwiki.org/6/6e/Ba_fe08_ephraim_great_lord_lance.gif',
+#     description: 'The prince of Renais. He is a man of great honour and bravery.',
+#     team_id: 2
+# )
 
 f3 = Unit.create(
     name: 'Seth (Sword)',
