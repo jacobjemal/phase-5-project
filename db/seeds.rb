@@ -106,7 +106,7 @@ f4 = Unit.create(
 
 
 f5 = Unit.create(
-    name: 'Gilliam Sword',
+    name: 'Gilliam (Sword)',
     hp: 21,
     move: 5,
     attack: 8,

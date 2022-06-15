@@ -1,13 +1,18 @@
 
-const GamePage = () => {
+const GamePage = ({playerOneTeam, playerTwoTeam}) => {
 
-// gird = [a1, a2, a3, a4, a5, ]
-<div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
+    <div>
+    <div className="square"></div> 
+    <div className="square"></div>
+    <div className="square"></div>
+    <div className="square"></div>
+    <div className="square"></div>
+    <div className="square"></div>
+    <div className="square"></div>
+    <div className="square"></div>
+    <div className="square"></div>
+    <div className="square"></div>
+    <div className="square"></div>
 </div>
 }
 export default GamePage
