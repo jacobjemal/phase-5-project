@@ -47,11 +47,6 @@ function UnitPage() {
     return (
     <div className="page">
       <div className="unit-page">
-        <div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
           {/* <button className="info-btn">INFO</button> */}
           <h1>UNITS</h1>
           <h5>hover for stats click to add to you'r team</h5>
@@ -65,16 +60,17 @@ function UnitPage() {
           }
           </div>
         </div>
-
-      <div className="game-page">
+      {/* <div className="game-page"> */}
         <div className="game-grid">
           { 
-          playerOneTeam.map((gameElement, i) => {
-            <GamePage key={i} gameElement={gameElement} playerOneTeam={playerOneTeam} playerTwoTeam={playerTwoTeam} setPlayerOneTeam={setPlayerOneTeam} setPlayerTwoTeam={setPlayerTwoTeam}/>
+          units.map((gameElement, i) => {
+            return(
+              <GamePage key={i} gameElement={gameElement} playerOneTeam={playerOneTeam} playerTwoTeam={playerTwoTeam} setPlayerOneTeam={setPlayerOneTeam} setPlayerTwoTeam={setPlayerTwoTeam}/>
+              )
           })
         }
         </div>
-      </div>
+      {/* </div> */}
     </div> 
       );
 }
