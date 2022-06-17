@@ -15,6 +15,15 @@ h5 {
   margin: 0;
 }
 
+/* .page {
+  width: 1100px;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 5px;
+  min-width: calc(840px + 25px);
+  margin: auto;
+} */
+
 .info-btn {
   font-family: 'Bebas Neue', cursive;
   background-image: url('https://cdn.fireemblemwiki.org/8/81/FESS_Magvel_03.jpg');
@@ -22,10 +31,11 @@ h5 {
   width: 70px;
   cursor: pointer;
   font-weight: bold;
-  top: 1%;
+  top: 1;
 }
 
 .unit-grid {
+  /* background-color: black; */
   width: 1100px;
   display: flex;
   flex-wrap: wrap;
@@ -105,3 +115,65 @@ h5 {
   cursor: pointer;
   width: 50%;
 }
+
+ .game-page {
+background-color: slateblue;
+} 
+
+.game-grid { 
+  /* background-image: url('https://serenesforest.net/wp-content/uploads/2014/05/fe8map6.png');  */
+  background-color: aqua;
+  /* height: 300px;
+  width: 300px; */
+  /* margin: 0 auto;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 33% 33% 33%;
+  max-width: 300px; */
+  height: 1000px;
+  width: 1000px;
+}
+
+.square-con {
+  background-color: beige;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 33% 33% 33%;
+  max-width: 300px;
+  
+}
+
+
+.square {
+  background-color: yellow;
+  min-width: 30px;
+  min-height: 30px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  cursor: pointer; 
+  height: 500px;
+  width: 500px;
+}
+/* 
+.container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 33% 33% 33%;
+  max-width: 300px;
+
+}
+
+.tile {
+  border: 1px solid white;
+  min-width: 100px;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  cursor: pointer;
+} */

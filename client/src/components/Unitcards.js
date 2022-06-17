@@ -1,46 +1,48 @@
 import { useState } from "react"
 
 
-const UnitCards = ({element, playerOneTeam, playerTwoTeam, setPlayerOneTeam, setPlayerTwoTeam}) => {
+const UnitCards = ({UnitElement, playerOneTeam, playerTwoTeam, setPlayerOneTeam, setPlayerTwoTeam}) => {
     const [show, setShow] = useState(null)
     const [isVis, setIsVis] = useState(false)
-    const {attack, attack_sprite, defense, hp, weapon, move, name, range, stationery_sprite_blue, stationery_sprite_red  /*, team, team_id, description, id */ } = element
+    const { attack, attack_sprite, defense, hp, weapon, move, name, range, stationery_sprite_blue, stationery_sprite_red  /*, team, team_id, description, id */ } = UnitElement
     
 
-    const showBlue = (b) => {
+    const showBlue = () => {
         setShow(true) 
         setIsVis(true)
-        console.log(`you selected ${name} for team blue`)
+        // console.log(`you selected ${name} for team blue`)
     }
     
     const showRed = () => {
         setShow(false) 
         setIsVis(true)
-        console.log(`you selected ${name} for team red`)
+        // console.log(`you selected ${name} for team red`)
     }
 
 
     const player1 = () => {
-        let blue2 = element
+        let blue2 = UnitElement
         // console.log('b2', b2)
         if ( playerOneTeam.length <= 4 ) {
             setPlayerOneTeam([...playerOneTeam, blue2])
         } else {
         alert('cant select anymore')
-        console.log('player1:', playerOneTeam)
+        // console.log('player1:', playerOneTeam)
         }
     }
     
     const player2 = () => {
-        let red2 = element
+        let red2 = UnitElement
         // console.log('r2:', r2)
         if ( playerTwoTeam.length <= 4 ) {
             setPlayerTwoTeam([...playerTwoTeam, red2])
         } else {
             alert('cant select anymore')
-            console.log('player2:', playerTwoTeam)
+            // console.log('player2:', playerTwoTeam)
         }
     }
+
+
     
 
 return(
@@ -62,11 +64,10 @@ return(
                     <p>move: {move}</p>
                     <p>weapon: {weapon}</p>
                     <p>range: {range}</p>
-                    <button className="small-unit-btn" onClick={()=> {showBlue(); player1()}} > <img  src={stationery_sprite_blue}/> </button>
+                    <button className="small-unit-btn" onClick={()=> {showBlue(); player1()}}> <img  src={stationery_sprite_blue}/> </button>
                     <button className="small-unit-btn" onClick={()=> {showRed(); player2()}}> <img  src={stationery_sprite_red}/> </button>
                     {/* <button className="small-unit-btn" onClick={()=> {setShow(true), setIsVis(true)}}> <img  src={stationery_sprite_blue}/> </button>
                     <button className="small-unit-btn" onClick={()=> {setShow(false), setIsVis(true)}}> <img  src={stationery_sprite_red}/> </button> */}
-                    
                 </div> 
             </div>
         </div>

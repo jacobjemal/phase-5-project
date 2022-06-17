@@ -12,7 +12,7 @@ class Unit < ApplicationRecord
         attack = self.attack - defender.defense
             if defender.team == self.team
                 puts "sorry cant attack allies"
-                return 0 # Seth cant attack Ephraim
+                return 0
             end
         if attack < 0 
             defender.hp = (defender.hp  -  2)

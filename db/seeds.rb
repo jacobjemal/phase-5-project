@@ -74,7 +74,7 @@ puts '🌱 teams Done!'
 #     team_id: 2
 # )
 
-f3 = Unit.create(
+Unit.create(
     name: 'Seth (Sword)',
     hp: 23,
     move: 8,
@@ -89,7 +89,7 @@ f3 = Unit.create(
     team_id: 3
 )
 
-f4 = Unit.create(
+Unit.create(
     name: 'Seth (Lance)',
     hp: 23,
     move: 8,
@@ -104,8 +104,7 @@ f4 = Unit.create(
     team_id: 3
 )
 
-
-f5 = Unit.create(
+Unit.create(
     name: 'Gilliam (Sword)',
     hp: 21,
     move: 5,
@@ -120,7 +119,7 @@ f5 = Unit.create(
     team_id: 4
 )
 
-f6 = Unit.create(
+Unit.create(
     name: 'Gilliam (Lance)',
     hp: 21,
     move: 5,
@@ -135,7 +134,7 @@ f6 = Unit.create(
     team_id: 2
 )
 
-f7 = Unit.create(
+Unit.create(
     name: 'Gilliam (Axe)',
     hp: 21,
     move: 5,
@@ -150,7 +149,7 @@ f7 = Unit.create(
     team_id: 3
 )
 
-f8 = Unit.create(
+Unit.create(
     name: 'Kyle (Sword)',
     hp: 21,
     move: 6,
@@ -165,7 +164,7 @@ f8 = Unit.create(
     team_id: 4
 )
 
-f9 = Unit.create(
+Unit.create(
     name: 'Kyle (Lance)',
     hp: 21,
     move: 6,
@@ -180,7 +179,7 @@ f9 = Unit.create(
     team_id: 1
 )
 
-f10 = Unit.create(
+Unit.create(
     name: 'Kyle (Axe)',
     hp: 21,
     move: 6,
@@ -195,7 +194,7 @@ f10 = Unit.create(
     team_id: 2
 )
 
-f11 = Unit.create(
+Unit.create(
     name: 'Innes',
     hp: 21,
     move: 6,
@@ -225,7 +224,7 @@ f11 = Unit.create(
 #     team_id: ,
 # )
 
-f12 = Unit.create(
+Unit.create(
     name: 'Hayden',
     hp: 21,
     move: 6,
@@ -240,7 +239,7 @@ f12 = Unit.create(
     team_id: 4
 )
 
-f13 = Unit.create(
+Unit.create(
     name: 'Gerik (Sword)',
     hp: 22,
     move: 6,
@@ -255,7 +254,7 @@ f13 = Unit.create(
     team_id: 1
 )
 
-f14 = Unit.create(
+Unit.create(
     name: 'Gerik',
     hp: 22,
     move: 6,
@@ -270,7 +269,7 @@ f14 = Unit.create(
     team_id: 2
 )
 
-f15 = Unit.create(
+Unit.create(
     name: 'Garcia (Axe)',
     hp: 23,
     move: 6,
@@ -285,7 +284,7 @@ f15 = Unit.create(
     team_id: 3
 )
 
-f16 = Unit.create(
+Unit.create(
     name: 'Garcia (Bow)',
     hp: 23,
     move: 6,
@@ -300,7 +299,7 @@ f16 = Unit.create(
     team_id: 4
 )
 
-f17 = Unit.create(
+Unit.create(
     name: 'Ross',
     hp: 24,
     move: 6,
