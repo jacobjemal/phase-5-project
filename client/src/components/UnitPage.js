@@ -18,6 +18,9 @@ function UnitPage() {
       }, [])
 
 
+ 
+
+
 
       // console.log('units:', units)
 
@@ -58,22 +61,45 @@ function UnitPage() {
         {
           units.map((UnitElement, i) => {     
             return( 
-              <UnitCards key={i} UnitElement={UnitElement} playerOneTeam={playerOneTeam} playerTwoTeam={playerTwoTeam} setPlayerOneTeam={setPlayerOneTeam} setPlayerTwoTeam={setPlayerTwoTeam}/>
+              <UnitCards player1={player1} player2={player2} key={i} UnitElement={UnitElement} playerOneTeam={playerOneTeam} playerTwoTeam={playerTwoTeam} setPlayerOneTeam={setPlayerOneTeam} setPlayerTwoTeam={setPlayerTwoTeam}/>
+              
               )
+              const player1 = () => {
+                let blue2 = UnitElement
+                // console.log('b2', b2)
+                if ( playerOneTeam.length <= 4 ) {
+                    setPlayerOneTeam([...playerOneTeam, blue2])
+                } else {
+                alert('cant select anymore')
+                // console.log('player1:', playerOneTeam)
+                }
+            }
+            
+            const player2 = () => {
+                let red2 = UnitElement
+                // console.log('r2:', r2)
+                if ( playerTwoTeam.length <= 4 ) {
+                    setPlayerTwoTeam([...playerTwoTeam, red2])
+                } else {
+                    alert('cant select anymore')
+                    // console.log('player2:', playerTwoTeam)
+                }
+            }
             })
+            
           }
           </div>
-        </div>
       <div className="game-page">
         <div className="game-grid">
           <GamePage units={units} playerOneTeam={playerOneTeam} playerTwoTeam={playerTwoTeam} setPlayerOneTeam={setPlayerOneTeam} setPlayerTwoTeam={setPlayerTwoTeam}/>
         {/* {
           units.map((gameElement, i ) => {
             return (
-
-            )
-          })
-        } */}
+              
+              )
+            })
+          } */}
+          </div>
         </div>
       </div>
     </div> 

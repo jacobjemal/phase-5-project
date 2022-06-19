@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 
-const UnitCards = ({UnitElement, playerOneTeam, playerTwoTeam, setPlayerOneTeam, setPlayerTwoTeam}) => {
+const UnitCards = ({ player1, player2, UnitElement, playerOneTeam, playerTwoTeam, setPlayerOneTeam, setPlayerTwoTeam}) => {
     const [show, setShow] = useState(null)
     const [isVis, setIsVis] = useState(false)
     
@@ -22,27 +22,7 @@ const UnitCards = ({UnitElement, playerOneTeam, playerTwoTeam, setPlayerOneTeam,
     }
 
 
-    const player1 = () => {
-        let blue2 = UnitElement
-        // console.log('b2', b2)
-        if ( playerOneTeam.length <= 4 ) {
-            setPlayerOneTeam([...playerOneTeam, blue2])
-        } else {
-        alert('cant select anymore')
-        // console.log('player1:', playerOneTeam)
-        }
-    }
-    
-    const player2 = () => {
-        let red2 = UnitElement
-        // console.log('r2:', r2)
-        if ( playerTwoTeam.length <= 4 ) {
-            setPlayerTwoTeam([...playerTwoTeam, red2])
-        } else {
-            alert('cant select anymore')
-            // console.log('player2:', playerTwoTeam)
-        }
-    }
+
 
 
     
