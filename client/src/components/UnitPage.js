@@ -5,6 +5,8 @@ import GamePage from "./GamePage"
 function UnitPage() {
 
   const [units, setUnits] = useState([])
+  const [playerOneTeam, setPlayerOneTeam] = useState([])
+  const [playerTwoTeam, setPlayerTwoTeam] = useState([])
   
 
       useEffect(() => {
@@ -14,33 +16,35 @@ function UnitPage() {
           setUnits(res)
         })()
       }, [])
+
+
+
       // console.log('units:', units)
 
       /// players ///
 
-      const [playerOneTeam, setPlayerOneTeam] = useState([])
-      const [playerTwoTeam, setPlayerTwoTeam] = useState([])
       // const [currentPlayer, setCurrentPlayer] = useState([])
       
-      const blueReady = () => {
-        if (playerOneTeam.length && playerTwoTeam.length <= 4 ){
-        // return //gmae page 
-      } else {
-        alert('BLUE you need to slect 5 units')
-      }
-    }
+    //   const blueReady = () => {
+    //     if (playerOneTeam.length && playerTwoTeam.length <= 4 ){
+    //     // return //gmae page 
+    //   } else {
+    //     alert('BLUE you need to slect 5 units')
+    //   }
+    // }
 
-    const redReady = () => {
-      if ( playerTwoTeam.length && playerOneTeam.length <= 4) {
-      } else {
-        alert('RED you need to slect 5 units')
-      }
-    }
+    // const redReady = () => {
+    //   if ( playerTwoTeam.length && playerOneTeam.length <= 4) {
+    //   } else {
+    //     alert('RED you need to slect 5 units')
+    //   }
+    // }
     
       // currentPlayer = playerOneTeam
       /*
       i can make the turn logic in the game page 
       */
+
       
       
 
@@ -60,17 +64,18 @@ function UnitPage() {
           }
           </div>
         </div>
-      {/* <div className="game-page"> */}
+      <div className="game-page">
         <div className="game-grid">
-          { 
-          units.map((gameElement, i) => {
-            return(
-              <GamePage key={i} gameElement={gameElement} playerOneTeam={playerOneTeam} playerTwoTeam={playerTwoTeam} setPlayerOneTeam={setPlayerOneTeam} setPlayerTwoTeam={setPlayerTwoTeam}/>
-              )
+          <GamePage units={units} playerOneTeam={playerOneTeam} playerTwoTeam={playerTwoTeam} setPlayerOneTeam={setPlayerOneTeam} setPlayerTwoTeam={setPlayerTwoTeam}/>
+        {/* {
+          units.map((gameElement, i ) => {
+            return (
+
+            )
           })
-        }
+        } */}
         </div>
-      {/* </div> */}
+      </div>
     </div> 
       );
 }

@@ -4,7 +4,9 @@ import { useState } from "react"
 const UnitCards = ({UnitElement, playerOneTeam, playerTwoTeam, setPlayerOneTeam, setPlayerTwoTeam}) => {
     const [show, setShow] = useState(null)
     const [isVis, setIsVis] = useState(false)
+    
     const { attack, attack_sprite, defense, hp, weapon, move, name, range, stationery_sprite_blue, stationery_sprite_red  /*, team, team_id, description, id */ } = UnitElement
+
     
 
     const showBlue = () => {

@@ -1,16 +1,16 @@
 import './App.css';
 import React from "react";
 import UnitPage from './components/UnitPage';
-// import Home from './components/Home';
+import Home from './components/Home';
 
 
 
 function App() {
   return (
     <div className="App">
-        <UnitPage/>
+        {/* <UnitPage/> */}
       {/* <GamePage/>  */}
-      {/* <Home /> */}
+      <Home />
       {/* <button>INFO</button> */}
     </div>
   )
