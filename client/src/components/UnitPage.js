@@ -23,6 +23,9 @@ function UnitPage({}) {
 
 
 
+ 
+
+
 
   
   
@@ -54,7 +57,29 @@ function UnitPage({}) {
             return( 
               <UnitCards key={i} unitElement={unitElement} playerOneTeam={playerOneTeam} playerTwoTeam={playerTwoTeam} setPlayerOneTeam={setPlayerOneTeam} setPlayerTwoTeam={setPlayerTwoTeam} /> 
               )
+              const player1 = () => {
+                let blue2 = UnitElement
+                // console.log('b2', b2)
+                if ( playerOneTeam.length <= 4 ) {
+                    setPlayerOneTeam([...playerOneTeam, blue2])
+                } else {
+                alert('cant select anymore')
+                // console.log('player1:', playerOneTeam)
+                }
+            }
+            
+            const player2 = () => {
+                let red2 = UnitElement
+                // console.log('r2:', r2)
+                if ( playerTwoTeam.length <= 4 ) {
+                    setPlayerTwoTeam([...playerTwoTeam, red2])
+                } else {
+                    alert('cant select anymore')
+                    // console.log('player2:', playerTwoTeam)
+                }
+            }
             })
+            
           }
           </div>
         </div>
