@@ -1,74 +1,20 @@
 
-const GamePage = ({units, gameElement, playerOneTeam, playerTwoTeam}) => {
-
-    
-        const {attack, attack_sprite, defense, hp, weapon, move, name, range, stationery_sprite_blue, stationery_sprite_red  /*, team, team_id, description, id */ } = playerOneTeam
-    // const [square, setSquare] = useState([])
-    // const [moves, setMoves] = useState(false)
+import {useEffect, useState} from 'react'
 
 
+const GamePage = ({players, units, unitElement, gameElement, setPlayerOneTeam, playerOneTeam, playerTwoTeam}) => {
+  const {id, attack, attack_sprite, defense, hp, weapon, move, name, range, stationery_sprite_blue, stationery_sprite_red  /*, team, team_id, description, id */ } = gameElement
 
 
-console.log(playerOneTeam)
-// console.log(playerTwoTeam)
-    return(
-        <div className="square-con">
-        <button >
+console.log('p1', playerOneTeam)
+console.log('p2', playerTwoTeam)
 
-            <div className="square"> <img src={stationery_sprite_blue} className="game-unit"/> </div>                                                                                   
-        </button>
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <button> <div className="square">  </div>   </button>                                                                                
-            <div className="square">  </div>                                                                                   
-            <div className="square">  </div>                                                                                   
-            <div className="square">  </div>                                                                                   
-            <div className="square"> </div>                                                                                   
-            <div className="square"> </div>                                                                                   
-         </div>
+    return (
+      <div className="square-con">
+        <div className="square"></div>
 
-    )
+      </div>
+  )
 }
 export default GamePage
+{/* <img onClick={() => alert('uhfu9we')} src={unitElement.stationery_sprite_blue} className="game-unit"/> */}

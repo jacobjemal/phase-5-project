@@ -116,6 +116,7 @@ h5 {
   width: 50%;
 }
 
+
 .game-page {
 background-color: slateblue;
 width: 100vw;
@@ -127,11 +128,13 @@ display: inline-block;
 .game-grid { 
   background-color: aqua;
   height: 300px;
+  
 } 
 
 .square-con {
+  top: 50%;
   background-color: yellow;
-  background-image: url('https://serenesforest.net/wp-content/uploads/2014/05/fe8map6.png'); 
+  /* background-image: url('https://serenesforest.net/wp-content/uploads/2014/05/fe8map6.png');  */
   height: 500px;
   width: 400px;
   flex-wrap: wrap;
@@ -144,15 +147,22 @@ display: inline-block;
 
 .square {
   border: 1px solid red;
+
   background-position: center;
 justify-content: center;
+flex-wrap: wrap;
   width: 50px;
   height: 50px;
-  margin: 0px;
+  margin: 5px;
+  cursor: pointer;
 }
 
 .game-unit {
-
+background-color: transparent;
+display: flex;
   height: 50px;
   width: 50px;
-}
+} 
+
+
+ 

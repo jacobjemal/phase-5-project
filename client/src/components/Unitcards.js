@@ -1,14 +1,15 @@
 import { useState } from "react"
+import GamePage from "./GamePage"
 
 
-const UnitCards = ({UnitElement, playerOneTeam, playerTwoTeam, setPlayerOneTeam, setPlayerTwoTeam}) => {
+const UnitCards = ({ unitElement, playerOneTeam, playerTwoTeam, setPlayerOneTeam, setPlayerTwoTeam}) => {
     const [show, setShow] = useState(null)
     const [isVis, setIsVis] = useState(false)
     
-    const { attack, attack_sprite, defense, hp, weapon, move, name, range, stationery_sprite_blue, stationery_sprite_red  /*, team, team_id, description, id */ } = UnitElement
+    const { attack, attack_sprite, defense, hp, weapon, move, name, range, stationery_sprite_blue, stationery_sprite_red  /*, team, team_id, description, id */ } = unitElement
 
     
-
+    // this shows the color for the front when you click the back
     const showBlue = () => {
         setShow(true) 
         setIsVis(true)
@@ -21,9 +22,9 @@ const UnitCards = ({UnitElement, playerOneTeam, playerTwoTeam, setPlayerOneTeam,
         // console.log(`you selected ${name} for team red`)
     }
 
-
+        // this limits the amout of units you can select 
     const player1 = () => {
-        let blue2 = UnitElement
+        let blue2 = unitElement
         // console.log('b2', b2)
         if ( playerOneTeam.length <= 4 ) {
             setPlayerOneTeam([...playerOneTeam, blue2])
@@ -34,7 +35,7 @@ const UnitCards = ({UnitElement, playerOneTeam, playerTwoTeam, setPlayerOneTeam,
     }
     
     const player2 = () => {
-        let red2 = UnitElement
+        let red2 = unitElement
         // console.log('r2:', r2)
         if ( playerTwoTeam.length <= 4 ) {
             setPlayerTwoTeam([...playerTwoTeam, red2])
@@ -44,8 +45,6 @@ const UnitCards = ({UnitElement, playerOneTeam, playerTwoTeam, setPlayerOneTeam,
         }
     }
 
-
-    
 
 return(
     <div className="flip-box">
@@ -73,9 +72,7 @@ return(
                 </div> 
             </div>
         </div>
-        
     )
-
 }
 export default UnitCards
 
