@@ -10,7 +10,6 @@ function UnitPage({}) {
   const [playerOneTeam, setPlayerOneTeam] = useState([])
   const [playerTwoTeam, setPlayerTwoTeam] = useState([])
 
-
   
   useEffect(() => {
     (async() => {
@@ -18,18 +17,16 @@ function UnitPage({}) {
       let res = await req.json()
       setUnits(res)
     })()
-  }, [])
+  }, []) 
 
   
-  /// players ///
-
+  /// players ///   
               // currentPlayer = playerOneTeam
               /*
               i can make the turn logic in the game page 
 
               */
-
-
+            
           return (
     <div className="page">
       <div className="unit-page">
@@ -48,7 +45,7 @@ function UnitPage({}) {
         </div>
             <div className="game-page">
         {/* <div className="game-grid"> */}
-              <GameContainer  units={units} playerOneTeam={playerOneTeam} setPlayerOneTeam={setPlayerOneTeam} playerTwoTeam={playerTwoTeam} setPlayerTwoTeam={setPlayerTwoTeam}/>
+              <GameContainer units={units} playerOneTeam={playerOneTeam} setPlayerOneTeam={setPlayerOneTeam} playerTwoTeam={playerTwoTeam} setPlayerTwoTeam={setPlayerTwoTeam}/>
           {/* </div>  */}
           </div>  
     </div> 

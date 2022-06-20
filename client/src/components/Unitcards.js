@@ -1,7 +1,5 @@
 import { useState } from "react"
 
-
-
 const UnitCards = ({ unitElement, playerOneTeam, playerTwoTeam, setPlayerOneTeam, setPlayerTwoTeam}) => {
     const [show, setShow] = useState(null)
     const [isVis, setIsVis] = useState(false)
@@ -9,7 +7,7 @@ const UnitCards = ({ unitElement, playerOneTeam, playerTwoTeam, setPlayerOneTeam
     const { attack, attack_sprite, defense, hp, weapon, move, name, range, stationery_sprite_blue, stationery_sprite_red  /*, team, team_id, description, id */ } = unitElement
 
     
-    // this shows the color for the front when you click the back
+    // this shows the color for the front when you click the back \\
     const showBlue = () => {
         setShow(true) 
         setIsVis(true)
@@ -22,29 +20,28 @@ const UnitCards = ({ unitElement, playerOneTeam, playerTwoTeam, setPlayerOneTeam
         // console.log(`you selected ${name} for team red`)
     }
 
-        // this limits the amout of units you can select 
+        // this limits the amout of units you can select \\ 
     const player1 = () => {
         let blue2 = unitElement
-        // console.log('b2', b2)
         if ( playerOneTeam.length <= 4 ) {
             setPlayerOneTeam([...playerOneTeam, blue2])
         } else {
         alert('cant select anymore')
         // console.log('player1:', playerOneTeam)
-        }
+    }
+    // console.log('blue2:',blue2)
     }
     
     const player2 = () => {
         let red2 = unitElement
-        // console.log('r2:', r2)
         if ( playerTwoTeam.length <= 4 ) {
             setPlayerTwoTeam([...playerTwoTeam, red2])
         } else {
             alert('cant select anymore')
             // console.log('player2:', playerTwoTeam)
         }
+        // console.log("red2:", red2)
     }
-
 
 return(
     <div className="flip-box">

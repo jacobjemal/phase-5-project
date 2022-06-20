@@ -1,13 +1,14 @@
 import GamePage from "./GamePage";
 
-function GameContainer({ units, setPlayerOneTeam, playerOneTeam, playerTwoTeam, setPlayerTwoTeam}) {
+function GameContainer({  units, setPlayerOneTeam, playerOneTeam, playerTwoTeam, setPlayerTwoTeam}) {
 
-// let p = {playerOneTeam, playerTwoTeam}
-let p = [playerOneTeam, playerTwoTeam]
-let players = []
-players.push(p)
 
-console.log('players:', players)
+    let p = {playerOneTeam, playerTwoTeam}
+    // let p = [playerOneTeam, playerTwoTeam]
+    let players = []
+    players.push(p)
+
+// console.log('players:', players)
 
     return (
     <div className="game-grid">
