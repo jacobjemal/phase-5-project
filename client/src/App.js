@@ -1,6 +1,5 @@
 import './App.css';
 import React from "react";
-import UnitPage from './components/UnitPage';
 import Home from './components/Home';
 
 

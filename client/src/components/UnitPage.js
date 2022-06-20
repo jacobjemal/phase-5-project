@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import UnitCards from "./UnitCards";
-import GamePage from "./GamePage"
+// import GamePage from "./GamePage"
 // import UnitsContainer from "./UnitsContainer";
 import GameContainer from "./GameContainer";
 

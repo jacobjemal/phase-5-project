@@ -1,5 +1,5 @@
 import { useState } from "react"
-import GamePage from "./GamePage"
+
 
 
 const UnitCards = ({ unitElement, playerOneTeam, playerTwoTeam, setPlayerOneTeam, setPlayerTwoTeam}) => {
