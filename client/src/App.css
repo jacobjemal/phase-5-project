@@ -158,10 +158,11 @@ flex-wrap: wrap;
 }
 
 .game-unit {
-background-color: transparent;
-display: flex;
+  background-color: transparent;
+  display: flex;
   height: 50px;
   width: 50px;
+  cursor: pointer;
 } 
 
 

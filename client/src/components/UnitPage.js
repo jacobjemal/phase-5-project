@@ -9,6 +9,7 @@ function UnitPage() {
   const [units, setUnits] = useState([])
   const [playerOneTeam, setPlayerOneTeam] = useState([])
   const [playerTwoTeam, setPlayerTwoTeam] = useState([])
+  const [currentPlayer, setCurrentPlayer] = useState('')
 
   
   useEffect(() => {
@@ -21,10 +22,13 @@ function UnitPage() {
 
   
   /// players ///   
-              // currentPlayer = playerOneTeam
+
+
+
+            // currentPlayer = playerOneTeam
+
               /*
               i can make the turn logic in the game page 
-
               */
             
           return (
@@ -37,7 +41,7 @@ function UnitPage() {
         {
           units.map((unitElement, i) => {     
             return( 
-              <UnitCards key={i} unitElement={unitElement} playerOneTeam={playerOneTeam} playerTwoTeam={playerTwoTeam} setPlayerOneTeam={setPlayerOneTeam} setPlayerTwoTeam={setPlayerTwoTeam} /> 
+              <UnitCards currentPlayer={currentPlayer} setCurrentPlayer={setCurrentPlayer} key={i} unitElement={unitElement} playerOneTeam={playerOneTeam} playerTwoTeam={playerTwoTeam} setPlayerOneTeam={setPlayerOneTeam} setPlayerTwoTeam={setPlayerTwoTeam} /> 
               )
             })
           }
@@ -45,7 +49,7 @@ function UnitPage() {
         </div>
             <div className="game-page">
         {/* <div className="game-grid"> */}
-              <GameContainer units={units} playerOneTeam={playerOneTeam} setPlayerOneTeam={setPlayerOneTeam} playerTwoTeam={playerTwoTeam} setPlayerTwoTeam={setPlayerTwoTeam}/>
+              <GameContainer currentPlayer={currentPlayer} setCurrentPlayer={setCurrentPlayer} units={units} playerOneTeam={playerOneTeam} setPlayerOneTeam={setPlayerOneTeam} playerTwoTeam={playerTwoTeam} setPlayerTwoTeam={setPlayerTwoTeam}/>
           {/* </div>  */}
           </div>  
     </div> 
