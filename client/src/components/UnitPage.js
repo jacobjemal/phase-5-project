@@ -4,7 +4,7 @@ import UnitCards from "./UnitCards";
 // import UnitsContainer from "./UnitsContainer";
 import GameContainer from "./GameContainer";
 
-function UnitPage({}) {
+function UnitPage() {
 
   const [units, setUnits] = useState([])
   const [playerOneTeam, setPlayerOneTeam] = useState([])

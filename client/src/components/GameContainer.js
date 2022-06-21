@@ -1,22 +1,34 @@
 import GamePage from "./GamePage";
 
-function GameContainer({  units, setPlayerOneTeam, playerOneTeam, playerTwoTeam, setPlayerTwoTeam}) {
+function GameContainer({  units, setPlayerOneTeam, playerOneTeam, playerTwoTeam, setPlayerTwoTeam }) {
 
 
-    let p = {playerOneTeam, playerTwoTeam}
-    // let p = [playerOneTeam, playerTwoTeam]
-    let players = []
-    players.push(p)
+        // works with out render \\
+    // let p = {playerOneTeam, playerTwoTeam}
+    // // // let p = [playerOneTeam, playerTwoTeam]
+    // // let players = []
+    // let players = [...playerOneTeam, ...playerTwoTeam]
+    // players.push(p)
+    
 
-// console.log('players:', players)
+    // let p = {playerOneTeam, playerTwoTeam}
+    let p = [playerOneTeam, setPlayerTwoTeam]
+    // let players = []
+    let players = [...playerOneTeam, ...playerTwoTeam]
+    p.push(players)
+    
+
+            // setPlayerOneTeam(prevState => !prevState)
+
+console.log('players:', players)
 
     return (
     <div className="game-grid">
-        {players.map((gameElement, i) => {
+        <GamePage players={players} playerOneTeam={playerOneTeam} setPlayerOneTeam={setPlayerOneTeam} playerTwoTeam={playerTwoTeam} setPlayerTwoTeam={setPlayerTwoTeam}/> 
+        {/* {players.map((gameElement, i) => {
             return(
-                <GamePage key={i} gameElement={gameElement} playerOneTeam={playerOneTeam} setPlayerOneTeam={setPlayerOneTeam} playerTwoTeam={playerTwoTeam} setPlayerTwoTeam={setPlayerTwoTeam}/>
                 )
-            })}
+            })} */} 
     </div>
     );
 }

@@ -1,10 +1,11 @@
 import { useState } from "react"
 
-const UnitCards = ({ unitElement, playerOneTeam, playerTwoTeam, setPlayerOneTeam, setPlayerTwoTeam}) => {
+const UnitCards = ({ unitElement, playerOneTeam, playerTwoTeam, setPlayerOneTeam, setPlayerTwoTeam }) => {
     const [show, setShow] = useState(null)
     const [isVis, setIsVis] = useState(false)
     
-    const { attack, attack_sprite, defense, hp, weapon, move, name, range, stationery_sprite_blue, stationery_sprite_red  /*, team, team_id, description, id */ } = unitElement
+    const { attack, attack_sprite, defense, hp, weapon, move, name, range, stationery_sprite_blue, stationery_sprite_red  
+        /*, team, team_id, description, id */ } = unitElement
 
     
     // this shows the color for the front when you click the back \\
@@ -19,8 +20,8 @@ const UnitCards = ({ unitElement, playerOneTeam, playerTwoTeam, setPlayerOneTeam
         setIsVis(true)
         // console.log(`you selected ${name} for team red`)
     }
-
-        // this limits the amout of units you can select \\ 
+    
+    // this limits the amout of units you can select \\ 
     const player1 = () => {
         let blue2 = unitElement
         if ( playerOneTeam.length <= 4 ) {
