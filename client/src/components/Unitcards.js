@@ -10,13 +10,12 @@ const UnitCards = ({currentPlayer, setCurrentPlayer, unitElement, playerOneTeam,
         
 
 
-        
     
     // this shows the color for the front when you click the back \\
     const showBlue = () => {
         setShow(true) 
         setIsVis(true)
-        setDisabled(true)
+        setDisabled(true)    
         // console.log(`you selected ${name} for team blue`)
     }
     
@@ -24,20 +23,17 @@ const UnitCards = ({currentPlayer, setCurrentPlayer, unitElement, playerOneTeam,
         setShow(false) 
         setIsVis(true)
         setDisabled(true)
-
         // console.log(`you selected ${name} for team red`)
     }
 
         
     // this limits the amout of units you can select \\ 
     const player1 = () => {
-        let currentPlayer = unitElement
-        // let blue2 = unitElement
+        let blue2 = unitElement
         if ( playerOneTeam.length <= 4 ) {
-            // setPlayerOneTeam([...playerOneTeam, blue2])
-            setPlayerOneTeam([...playerOneTeam, currentPlayer])
+            setPlayerOneTeam([...playerOneTeam, blue2])
         } else {
-        alert('cant select anymore')
+            alert('cant select anymore')
         // console.log('player1:', playerOneTeam)
     }
     // console.log('blue2:',blue2)
@@ -45,11 +41,9 @@ const UnitCards = ({currentPlayer, setCurrentPlayer, unitElement, playerOneTeam,
 
     
     const player2 = () => {
-        let currentPlayer = unitElement
-        // let red2 = unitElement
+        let red2 = unitElement
         if ( playerTwoTeam.length <= 4 ) {
-            setPlayerTwoTeam([...playerTwoTeam, currentPlayer])
-            // setPlayerTwoTeam([...playerTwoTeam, red2])
+            setPlayerTwoTeam([...playerTwoTeam, red2])
         } else {
             alert('cant select anymore')
             // console.log('player2:', playerTwoTeam)
