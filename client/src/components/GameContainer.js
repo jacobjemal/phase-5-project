@@ -1,6 +1,8 @@
+import { useEffect } from "react";
 import GamePage from "./GamePage";
 
 function GameContainer({currentPlayer, setCurrentPlayer,  units, setPlayerOneTeam, playerOneTeam, playerTwoTeam, setPlayerTwoTeam }) {
+
 
 
          // // works with out render \\
@@ -11,7 +13,6 @@ function GameContainer({currentPlayer, setCurrentPlayer,  units, setPlayerOneTea
     // players.push(p)
     
     
-    
     let p = {playerOneTeam, playerTwoTeam}
     // let players =  [...playerOneTeam, ...playerTwoTeam] 
     // let p = [playerOneTeam, setPlayerTwoTeam]
@@ -19,7 +20,9 @@ function GameContainer({currentPlayer, setCurrentPlayer,  units, setPlayerOneTea
     let players = [...playerOneTeam, ...playerTwoTeam]
     // // let players = [{...playerOneTeam} || {...playerTwoTeam}]
     players.push(p)
-    
+
+
+
 
             // setPlayerOneTeam(prevState => !prevState)
 
@@ -27,7 +30,9 @@ console.log('players:', players)
 
     return (
     <div className="game-grid">
+        
         <GamePage currentPlayer={currentPlayer} setCurrentPlayer={setCurrentPlayer} players={players} playerOneTeam={playerOneTeam} setPlayerOneTeam={setPlayerOneTeam} playerTwoTeam={playerTwoTeam} setPlayerTwoTeam={setPlayerTwoTeam}/> 
+        <div className="gme-unit"></div>
         {/* {players.map((gameElement, i) => {
             return(
                 )

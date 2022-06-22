@@ -7,15 +7,13 @@ const UnitCards = ({currentPlayer, setCurrentPlayer, unitElement, playerOneTeam,
     
     const { attack, attack_sprite, defense, hp, weapon, move, name, range, stationery_sprite_blue, stationery_sprite_red  
         /*, team, team_id, description, id */ } = unitElement
-        
-
 
     
     // this shows the color for the front when you click the back \\
     const showBlue = () => {
         setShow(true) 
         setIsVis(true)
-        setDisabled(true)    
+        setDisabled(true)
         // console.log(`you selected ${name} for team blue`)
     }
     
@@ -26,7 +24,7 @@ const UnitCards = ({currentPlayer, setCurrentPlayer, unitElement, playerOneTeam,
         // console.log(`you selected ${name} for team red`)
     }
 
-        
+
     // this limits the amout of units you can select \\ 
     const player1 = () => {
         let blue2 = unitElement
@@ -34,8 +32,8 @@ const UnitCards = ({currentPlayer, setCurrentPlayer, unitElement, playerOneTeam,
             setPlayerOneTeam([...playerOneTeam, blue2])
         } else {
             alert('cant select anymore')
-        // console.log('player1:', playerOneTeam)
-    }
+            // console.log('player1:', playerOneTeam)
+        }
     // console.log('blue2:',blue2)
     }
 
@@ -73,7 +71,7 @@ return(
                     <p>move: {move}</p>
                     <p>weapon: {weapon}</p>
                     <p>range: {range}</p>
-                    <button className="small-unit-btn" disabled={disabled} onClick={()=> {showBlue(); player1()}} > <img  src={stationery_sprite_blue}/> </button>
+                    <button className="small-unit-btn" disabled={disabled} onClick={()=> {showBlue(); player1()}}> <img  src={stationery_sprite_blue}/> </button>
                     <button className="small-unit-btn" disabled={disabled} onClick={()=> {showRed(); player2()}} > <img  src={stationery_sprite_red}/> </button>
                     {/* <button className="small-unit-btn" onClick={()=> {setShow(true), setIsVis(true)}}> <img  src={stationery_sprite_blue}/> </button>
                     <button className="small-unit-btn" onClick={()=> {setShow(false), setIsVis(true)}}> <img  src={stationery_sprite_red}/> </button> */}
