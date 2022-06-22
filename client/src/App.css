@@ -146,7 +146,7 @@ height: 100vh;
   margin: auto;
   justify-content: center; */
   height: 620px;
-  width: 500px;
+  width: 450px;
   flex-wrap: wrap;
   display: flex;
   /* grid-template-columns: repeat(3, 1fr); */
@@ -167,6 +167,10 @@ height: 100vh;
 
 .square:hover {
   background-color: gold;
+}
+
+.square:active{
+  background-color: cyan;
 }
 
 
