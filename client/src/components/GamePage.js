@@ -13,24 +13,15 @@ const GamePage = ({ p, currentPlayer, setCurrentPlayer, players, units, unitElem
   // console.log('player1:', playerOneTeam)
   // console.log('player2:', playerTwoTeam)
         
-          let array = [];
-      for (let i = 0; i < 10; i++) {
-      for (let j = 0; j < 7; j++) {
-        let chr = String.fromCharCode(97 + j);
-        array.push({row: i, column: chr, unit: {}})
-        // console.log(array)
-      }
-    }
 
   //   const handlePlayerClick = (e) => { 
   //     //onClick={() => {handleClick()}}
   //     // e.target.id
-        
 
   //     console.log(e.target.id)
   // }
     
-  const handleClick = (e) => { 
+    const handleClick = (e) => { 
     //onClick={() => {handleClick()}}
     // e.target.id
       // if (selectedPlayer && selectedSquare) {
@@ -40,34 +31,43 @@ const GamePage = ({ p, currentPlayer, setCurrentPlayer, players, units, unitElem
 }
 
 
-
+let array = [];
+for (let i = 0; i < 13; i++) {
+for (let j = 0; j < 4; j++) {
+  let chr = String.fromCharCode(97 + j);
+  array.push({row: i, column: chr, unit: {}})
+  // console.log(array)
+}
+}
 
 
     return ( 
+      
       <div className="square-con" >
-        {/* <div className='square'> */}
+
         {playerOneTeam.map((gameElement, index) => { 
           const {id, attack, attack_sprite, defense, hp, weapon, move, name, range, stationery_sprite_blue, stationery_sprite_red, position  } = gameElement
 
 
-            let alphaArray = ["b","c","d","e","f"]
-            let set = document.getElementById(`column=${alphaArray[index]} row=0`)
-            let img = document.createElement('img')
-            img.src = stationery_sprite_blue
-            set.append( img)
+            // let alphaArray = ["b","c","d","e","f"]
+            // let set = document.getElementById(`column=${alphaArray[index]} row=0`)
+            // let img = document.createElement('img')
+            // img.src = stationery_sprite_blue
+            // set.append(img)
           
           // onClick=> {setSelectedPlayer(gameElement)};
           // onClick=> {setSelectedSquare(square)}
           
-          
-          return(
-            <>
-             {/* <div  className="square" id='start' >  
-               <img src={stationery_sprite_blue} className="game-unit"  />   
-              </div>  */}
+        return(
+          <>
+            <div  className="square" id='start' >  
+              <img src={stationery_sprite_blue} className="game-unit"  />   
+              </div> 
             </>
               )
+              
             })}
+
 
             {
               array.map((e) => {
@@ -81,23 +81,32 @@ const GamePage = ({ p, currentPlayer, setCurrentPlayer, players, units, unitElem
 
             {playerTwoTeam.map((gameElement, index2) => { 
             const {id, attack, attack_sprite, defense, hp, weapon, move, name, range, stationery_sprite_blue, stationery_sprite_red  } = gameElement
-            let betaArray = ["b","c","d","e","f"]
-            let set2 = document.getElementById(`column=${betaArray[index2]} row=9`)
-            let img2 = document.createElement('img')
-            img2.src = stationery_sprite_red
-            set2.append(img2)
-            console.log(set2)
+            
+            
+            // let betaArray = ["b","c","d","e","f"]
+            // let set2 = document.getElementById(`column=${betaArray[index2]} row=9`)
+            // let img2 = document.createElement('img')
+            // img2.src = stationery_sprite_red
+            // set2.append(img2)
+            // console.log(set2)
+
+            
             return(
               <>
-            {/* <div   className='square'>
+            <div   className='square'>
               <img src={stationery_sprite_red} className="game-unit"/>   
-              </div> */}
+              </div>
             </>
               )
             })}
+
              {/* </div> */}
+
       </div>
   )
 }
 export default GamePage
 {/* <img onClick={() => alert('uhfu9we')} src={unitElement.stationery_sprite_blue} className="game-unit"/> */}
+
+
+

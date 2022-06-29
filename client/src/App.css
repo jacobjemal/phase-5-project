@@ -7,12 +7,19 @@ h1 {
     margin: 0;
 }
 
+
 h5 {
   right: 30;
   font-family: 'Bebas Neue', cursive;
   text-align: center;
   font-size: 2em;
   margin: 0;
+}
+
+.p {
+  font-family: 'Bebas Neue', cursive;
+  text-align: center;
+  font-size: 1em;
 }
 
 /* .page {
@@ -56,6 +63,7 @@ h5 {
   height: 250px;
   margin: 10px;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
+
 }
 
 
@@ -122,29 +130,34 @@ h5 {
 
 
 .game-page {
-background-color: slateblue;
+/* background-color: black; */
 width: 100vw;
 height: 100vh;
+/* background-image: url(''); */
+
+
 
 
 } 
 
 .game-grid { 
-  background-color: aqua;
+  background-color: black;
+  left: 0%;
   height: 700px;
   width: 700;
   
 } 
 
+
 .square-con {
   background-color: yellow;
+  border: 20px solid gold;
   background-image: url('https://serenesforest.net/wp-content/uploads/2014/05/fe8map6.png'); 
   /* height: 500px;
   width: 400px;
   border-radius: 5px;
   min-width: calc(840px + 25px);
-  margin: auto;
-  justify-content: center; */
+  margin: auto; */
   height: 620px;
   width: 450px;
   flex-wrap: wrap;
@@ -156,14 +169,19 @@ height: 100vh;
 }
 
 
+
+
 .square {
   border: 1px solid red;
+  opacity: 99%;
   display: flex;
   width: 50px;
   height: 50px;
   margin: 5px;
   cursor: pointer;
 }
+
+
 
 .square:hover {
   background-color: gold;
@@ -180,3 +198,11 @@ height: 100vh;
   cursor: pointer;
 } 
 
+/* .battle {
+  background-color: black;
+  top: 75%;
+  right: 10%;
+  position: inherit;
+  height: 500px;
+  width: 500px;
+} */

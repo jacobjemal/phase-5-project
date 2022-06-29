@@ -30,11 +30,14 @@ function GameContainer({currentPlayer, setCurrentPlayer,  units, setPlayerOneTea
 
     return (
     <div className="game-grid">
+        <div className="battle"></div>
+
         <GamePage  currentPlayer={currentPlayer} setCurrentPlayer={setCurrentPlayer}  playerOneTeam={playerOneTeam} setPlayerOneTeam={setPlayerOneTeam} playerTwoTeam={playerTwoTeam} setPlayerTwoTeam={setPlayerTwoTeam}/> 
          {/* {players.map((gameElement, i) => {
-            return(
-                )
-            })}  */}
+             return(
+                 )
+                })}  */}
+
     </div>
     );
 }
