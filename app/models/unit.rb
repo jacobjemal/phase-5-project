@@ -15,7 +15,7 @@ class Unit < ApplicationRecord
                 return 0
             end
         if attack < 0 
-            defender.hp = (defender.hp  -  2)
+            defender.hp = (defender.hp  -  1)
         else 
             defender.hp = (defender.hp - attack)
         end
